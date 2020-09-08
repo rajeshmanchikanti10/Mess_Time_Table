@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "776863609598",
+    "firebase_url": "https://mess-timetable.firebaseio.com",
+    "project_id": "mess-timetable",
+    "storage_bucket": "mess-timetable.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776863609598:android:8f86ba1b3af0000147abaf",
+        "android_client_info": {
+          "package_name": "com.example.messtimetable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776863609598-6eaiumjmiml45u2v084vuvp88f3b7q2j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.messtimetable",
+            "certificate_hash": "52da3b036ef9592dd773aa776c9a3d28ca154ece"
+          }
+        },
+        {
+          "client_id": "776863609598-32u7ehed8t416j8nfg0notp822f05ea2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu4wyFRiZVBR07oz7WwhoQaTCi9Mq_cjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776863609598-32u7ehed8t416j8nfg0notp822f05ea2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

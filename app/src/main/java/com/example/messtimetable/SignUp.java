@@ -17,10 +17,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class SignUp extends AppCompatActivity {
     Button onregister;
-    EditText username;
+    EditText usn,username;
     EditText password,cpassword;
     FirebaseAuth fAuth;
     EditText email;
@@ -30,29 +35,31 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
         onregister=findViewById(R.id.register_submit);
-        username=findViewById(R.id.register_username);
+        usn=findViewById(R.id.register_username);
         password=findViewById(R.id.register_password);
         cpassword=findViewById(R.id.register_confirm_password);
         progressbar=findViewById(R.id.progbar);
         email=findViewById(R.id.gmailretrivedfromfirebase);
         fAuth=FirebaseAuth.getInstance();
+        username=findViewById(R.id.UserName);
 
         onregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String usrname=username.getText().toString().trim();
+                final String ssn=usn.getText().toString().trim();
+                final String usrname=username.getText().toString().trim();
                 String psswd=password.getText().toString().trim();
                 String eml=email.getText().toString().trim();
                 String cpasswd=cpassword.getText().toString().trim();
-                if(TextUtils.isEmpty(usrname))
+                if(TextUtils.isEmpty(ssn))
                 {
 
-                    username.setError("User name required!");
+                    usn.setError("User name required!");
                     return;
                 }
-                if(!usrname.startsWith("PES"))
+                if(!ssn.startsWith("PES"))
                 {
-                    username.setError("your username starts with PES!");
+                    usn.setError("your username starts with PES!");
                     return;                }
                 if(TextUtils.isEmpty(psswd))
                 {
@@ -84,7 +91,15 @@ public class SignUp extends AppCompatActivity {
                         if(task.isSuccessful())
                         {   progressbar.setVisibility(View.VISIBLE);
                             Toast.makeText(SignUp.this,"registerd successfully!",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(SignUp.this,Login.class));
+                            DatabaseReference myRef1 = FirebaseDatabase.getInstance().getReference(); //Getting root reference
+                            FirebaseUser user = fAuth.getCurrentUser();
+                            Toast.makeText(getApplicationContext(),usrname+ssn,Toast.LENGTH_SHORT).show();
+
+
+                           user usr=new user(usrname);
+
+                            myRef1.child("users").child(user.getUid()).setValue(usr);
+                            startActivity(new Intent(SignUp.this,Login. class));
                         }
                         else
                         {
