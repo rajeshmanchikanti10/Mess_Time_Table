@@ -1,4 +1,6 @@
 # Mess_Time_Table is an android applicaiton used for hostel students especially pes university hostel students 
-this android application helps people knowing meal of particular day(user's can select date using calendar view)
-this also helps students in commenting on food 
-user get notified every day about the meal of current day.
+After user login they land to home page where user can look food menu of current day.
+This android application helps users to know food menu of particular day(user's can select date using calendar view).
+This application helps users in commenting on food 
+User's also get notified on their favorite food day.So that they wont be missing food on that day
+User get notified every day about the food of current day.
