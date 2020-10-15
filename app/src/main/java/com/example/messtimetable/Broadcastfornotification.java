@@ -69,7 +69,6 @@ public class Broadcastfornotification extends BroadcastReceiver {
             PendingIntent resultPendingIntent = PendingIntent.getActivity(mContext,
                     0 /* Request code */, resultIntent,
                     PendingIntent.FLAG_ONE_SHOT);
-
             mBuilder = new NotificationCompat.Builder(mContext);
             mBuilder.setSmallIcon(R.mipmap.ic_launcher);
             mBuilder.setContentTitle(title)

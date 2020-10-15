@@ -17,6 +17,7 @@
             android:enabled="true"
             android:exported="true"></service>
         <receiver android:name=".Broadcastfornotification"></receiver>
+
         <receiver android:name=".Notificationforfavorite"></receiver>
 
         <activity android:name=".Login">

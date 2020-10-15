@@ -9,6 +9,7 @@ public class user  {
     {
         username=usrname;
 
+
     }
    public user(){
 

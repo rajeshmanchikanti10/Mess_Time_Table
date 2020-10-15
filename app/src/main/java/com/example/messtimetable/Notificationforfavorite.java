@@ -28,6 +28,7 @@ public class Notificationforfavorite extends BroadcastReceiver {
         Calendar calendar=Calendar.getInstance();
 
         Toast.makeText(context,"in side notification for favorite",Toast.LENGTH_SHORT).show();
+
         int weekno=calendar.get(Calendar.WEEK_OF_YEAR);
         if(weekno%4==0)
             weekno=4;

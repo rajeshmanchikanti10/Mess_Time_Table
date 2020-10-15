@@ -39,6 +39,7 @@ public class favorite extends Fragment {
 
 
 
+
               /*  try {
                     dateNotification = formatToCompare
                             .parse(date);

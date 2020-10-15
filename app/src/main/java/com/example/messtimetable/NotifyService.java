@@ -31,8 +31,10 @@ public class NotifyService extends Service {
         NotificationManager nfm=(NotificationManager)getSystemService(NOTIFICATION_SERVICE);
         Intent intent=new Intent(this,MainActivity.class);
         PendingIntent pendingIntent=PendingIntent.getService(this,0,intent,0);
+
         Calendar calendar=Calendar.getInstance();
         int weekno=calendar.get(Calendar.WEEK_OF_YEAR);
+
         if(weekno%4==0)
             weekno=4;
         else

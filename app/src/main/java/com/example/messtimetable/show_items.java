@@ -24,6 +24,7 @@ import java.util.ArrayList;
 public class show_items extends Fragment {
 
 int weekno,day_of_the_week;
+
     public static String [][][]str={{{"Masala Dosa,sagu,Chutney,Tea,Coffee,Milk","Green Peass pulao,Chapati,Raita,Black Channa,White Rice,Pickle","Noddles,Tea Coffee","Mini-Feast"}
             ,{"Idli-Vada,Sambar,Chutney,Milk,Tea,Coffee","Puliogare,Mix veg cuury,Chapati,soppu-saaru,White Rice,Butter Milk,Papad,Pickle","Samosa,Tea,Coffee","Fulka,Dall-Tadaka,Methi-Rice,Veg-palya,White Rice,Rassam,Curd,Pickle"}
             ,{"Puri Sagu,Milk,Tea,Coffee","Bhindi Masala,Chapati,Coconut Rice,Yellow Dall,White Rice,Papad,Pickle","Bhel Puri,Tea,Coffee","Green Peas Masala,Fulka,Bombay dall,Rice,Sambar,Curd Rice,Fruit Salad,Pickle"}

@@ -7,6 +7,7 @@ public class comments {
     {
         comments=cnts;
         Date=date;
+
     }
     public comments(){
 

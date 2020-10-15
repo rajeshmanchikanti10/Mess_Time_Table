@@ -97,8 +97,7 @@ public class SignUp extends AppCompatActivity {
 
 
                            user usr=new user(usrname);
-
-                            myRef1.child("users").child(user.getUid()).setValue(usr);
+                           myRef1.child("users").child(user.getUid()).setValue(usr);
                             startActivity(new Intent(SignUp.this,Login. class));
                         }
                         else
